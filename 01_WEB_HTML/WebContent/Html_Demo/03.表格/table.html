@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>表格</title>
+</head>
+<body>
+
+	<!-- 在这里创建表格 -->
+	<!-- 使用table标签来声明一个表格 -->
+	<!-- 通过border属性来给表格添加边框 -->
+	<table border="1">
+		
+		<!-- tr标签代表表格中的一行 -->
+		<tr>
+			<!-- td标签代表行中的一个单元格 -->
+			<td>A1</td>
+			<td>A2</td>
+			<td>A3</td>
+			<td>A4</td>
+		</tr>
+		<tr>
+			<td>A1</td>
+			<td>A2</td>
+			<td>A3</td>
+			<!-- rowspan属性用来设置纵向的合并单元格 -->
+			<td rowspan="2">A4</td>
+		</tr>
+		<tr>
+			<td>A1</td>
+			<td>A2</td>
+			<td>A3</td>
+		</tr>
+		<tr>
+			<td>A1</td>
+			<td>A2</td>
+			<!-- colspan属性用来设置横向的合并单元格 -->
+			<td colspan="2">A3</td>
+		</tr>
+		
+	</table>
+
+</body>
+</html>

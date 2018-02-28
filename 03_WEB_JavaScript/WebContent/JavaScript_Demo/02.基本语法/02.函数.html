@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JS中的函数</title>
+<script type="text/javascript">
+
+	/*
+	
+		public int sum(int a , int b){
+			
+			return a+b;
+			
+		}
+	
+	*/
+
+	//01.声明函数
+	//js中直接使用function关键字来声明一个函数
+	//这个函数叫做匿名函数，不能调用
+	/* function(a , b){
+		return a+b;
+	} */
+	//JS中函数也是一个对象
+	var sum = function(a,b){
+		return a+b;
+	};
+	
+	//第二种声明方式，声明函数时直接指定函数名
+	function sum2(a,b,c){
+		return a+b+c;
+	}
+	
+	//02.调用函数
+	//调用函数的本质是 函数的引用+()
+	var result = sum("abc",456,true);
+	//声明函数时不需要指定形参的类型，而且调用函数时也不会检查实参的类型和个数
+	//因为这个特点，所以JS中没有重载这回事
+	
+	result = sum2("123",456,true);
+	
+	alert(result);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

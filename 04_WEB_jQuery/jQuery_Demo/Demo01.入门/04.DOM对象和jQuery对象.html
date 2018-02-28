@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>DOM对象和jQuery对象</title>
+<script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+
+	$(function(){
+		
+		//dom对象
+		var divEle = document.getElementById("testDiv");
+		
+		//jQuery对象
+		var $divObj = $("#testDiv");
+		
+		//dom --> jQuery对象,直接使用核心函数，将dom对象作为参数，返回值就是一个jQuery对象
+		var $div = $(divEle);
+		
+		//jQuery --> DOM
+		//jQuery对象的本质就是一个DOM对象的数组,通过 jQuery对象[索引] 转换为dom对象
+		//alert($div);
+		var doj = $divObj[0];
+		alert(doj);
+		
+		
+	});
+
+</script>
+</head>
+<body>
+
+	<div id="testDiv">Atguigu is Very Good!</div>
+	
+	<button id="dom2dom">使用DOM对象调用DOM方法</button>
+	<button id="dom2jQuery">使用DOM对象调用jQuery方法</button>
+	<button id="jQuery2jQuery">使用jQuery对象调用jQuery方法</button>
+	<button id="jQuery2dom">使用jQuery对象调用DOM方法</button>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body {
+		text-align: center;
+	}
+	#small {
+		margin-top: 150px;
+	}
+	#showBig {
+		position: absolute;
+		display: none;
+	}
+</style>
+<script type="text/javascript" src="script/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//当鼠标移入进小图时大图显示，移出时大图隐藏
+		$("#small").bind("mouseenter mouseleave",function(){
+			//切换图片的显示状态
+			$("#showBig").toggle();
+		});
+		
+		//再给小图片绑定一个鼠标移动的事件
+		$("#small").mousemove(function(event){
+			
+			
+			//获取指针的坐标
+			var x = event.clientX;
+			var y = event.clientY;
+			
+			//设置大图的坐标
+			$("#showBig").offset({top:y+20 , left:x+20});
+			
+		});
+		
+	});
+</script>
+</head>
+<body>
+
+	<img id="small" src="img/small.jpg" />
+	
+	<div id="showBig">
+		<img src="img/big.jpg">
+	</div>
+
+</body>
+</html>

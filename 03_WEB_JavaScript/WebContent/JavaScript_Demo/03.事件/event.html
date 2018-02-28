@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>JS中的事件</title>
+
+</head>
+<body>
+
+	<!-- 为一个按钮设置一个事件的响应 -->
+	<!-- 直接在标签中设置 -->
+	<!-- 这种方式将js代码和html代码写到一起，结构与行为耦合，不推荐这种方式 -->
+	<!-- <button id="btnId" onmouseover="alert('臭不要脸的，你点我干嘛')">SayHello</button> -->
+	<button id="btnId">SayHello</button>
+	
+	<script type="text/javascript">
+		//获取按钮的对象
+		var btn = document.getElementById("btnId");
+		//为按钮对象事件属性绑定响应函数
+		//这个函数我也成为回调函数
+		btn.onclick = function(){
+			alert("hello");
+		}; 
+		
+		alert(btn);
+	
+	</script>
+	
+	
+</body>
+</html>

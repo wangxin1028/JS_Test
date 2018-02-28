@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>HelloWorld</title>
+<!-- 使用jQuery之前先导入jQuery的库文件 -->
+<script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+	
+	/* window.onload = function(){
+		var btn = document.getElementById("btnId");
+		btn.onclick = function(){
+			alert("讨厌，又点人家！！");
+		};
+	}; */
+	
+	//$(function(){})相当于window.onload = function(){};
+	$(function(){
+		$("#btnId").click(function(){
+			alert("hello");
+		});
+	});
+	
+</script>
+</head>
+<body>
+
+	<button id="btnId">SayHello</button>
+
+</body>
+</html>
